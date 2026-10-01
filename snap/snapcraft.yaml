@@ -8,7 +8,7 @@ base: core24
 
 platforms:
   amd64:
-compression: lzo
+    compression: lzo
 
 parts:
   # NVIDIA's bundled libSDL2 (cef/libSDL2-2.0.so.0.3200.10) was compiled
