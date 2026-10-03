@@ -23,7 +23,7 @@ parts:
   sdl2:
     plugin: cmake
     source: https://github.com/libsdl-org/SDL.git
-    source-tag: release-2.32.10
+    source-tag: release-3.4.18
     cmake-parameters:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX=/usr
