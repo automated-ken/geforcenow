@@ -31,3 +31,10 @@ involved in running tests.
   design — tests run on a registered remote runner.
 - Redundant upstream-polling / sync-release workflows that duplicate automated-ken's
   own version-bump automation should be removed to avoid conflicting/duplicate PRs.
+
+## Pinned dependencies
+
+- `snap/snapcraft.yaml` `sdl2` part: keep `source-tag` on the SDL **2.x** line
+  (`release-2.*`). Never bump to `release-3.x` (SDL3): NVIDIA's client links
+  `libSDL2-2.0.so.0` and the build swaps in our SDL2 build, which SDL3 can't
+  replace. Automated version-bump agents must skip major-version changes here.

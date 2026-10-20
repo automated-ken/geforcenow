@@ -23,6 +23,10 @@ parts:
   sdl2:
     plugin: cmake
     source: https://github.com/libsdl-org/SDL.git
+    # PINNED to the SDL2 2.x line: do NOT bump to release-3.x (SDL3). SDL3
+    # builds libSDL3.so, not libSDL2-2.0.so.0, and NVIDIA's binary links
+    # SDL2, so the swap in geforcenow's override-build would break. Only
+    # bump within release-2.*; 2.32.10 is the latest 2.x tag.
     source-tag: release-2.32.10
     cmake-parameters:
       - -DCMAKE_BUILD_TYPE=Release
